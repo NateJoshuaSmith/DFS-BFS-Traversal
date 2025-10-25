@@ -59,7 +59,6 @@ class CampusNavigationSystem:
         # Add buttons
         tk.Button(button_frame, text="Add Building", command=self.add_building).pack(side=tk.LEFT, padx=5)
         tk.Button(button_frame, text="Connect Buildings", command=self.connect_buildings).pack(side=tk.LEFT, padx=5)
-        tk.Button(button_frame, text="Clear", command=self.clear_all).pack(side=tk.LEFT, padx=5)
         
         # Create pathfinding section
         pathfinding_frame = tk.Frame(main_frame)
@@ -95,6 +94,9 @@ class CampusNavigationSystem:
         
         # Clear animation button
         tk.Button(pathfinding_frame, text="Clear Animation", command=self.clear_animation).pack(side=tk.LEFT, padx=5)
+        
+        # Clear all button
+        tk.Button(pathfinding_frame, text="Clear All", command=self.clear_all).pack(side=tk.LEFT, padx=5)
         
         # Create canvas
         self.canvas = tk.Canvas(main_frame, bg="white", width=800, height=600)
